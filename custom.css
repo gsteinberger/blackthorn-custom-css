@@ -4,6 +4,6 @@ div.ticket-type.ng-star-inserted {
 }
 
 /* Hide 'Main event ticket' on the cart page */
-div.bt-card-inner div.ticket-type.ng-star-inserted {
+div.card-wrapper div.ticket-card div.bt-card-inner div.ticket-type {
     display: none !important;
 }
