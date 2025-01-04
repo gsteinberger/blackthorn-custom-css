@@ -1,0 +1,4 @@
+/* Hide 'Main event ticket' */
+div.ticket-type.ng-star-inserted {
+    display: none !important;
+}
