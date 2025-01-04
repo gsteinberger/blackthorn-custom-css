@@ -1,9 +1,9 @@
-/* Hide 'Main event ticket' only on the overview page */
-div.tickets-wrapper div.tickets-outer {
+/* Hide 'Main event ticket' on the overview page */
+div.tickets-outer div[style*="Main event ticket"] {
     display: none !important;
 }
 
-/* Hide 'Main event ticket' only on the cart page */
-div.card-wrapper div.ticket-card div.ng-star-inserted {
+/* Hide 'Main event ticket' on the cart page */
+div.card-wrapper div.ticket-card div[style*="Main event ticket"] {
     display: none !important;
 }
