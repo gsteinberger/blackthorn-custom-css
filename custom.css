@@ -1,4 +1,9 @@
-/* Hide 'Main event ticket' on all relevant pages */
+/* Hide 'Main event ticket' on the overview page */
 div.ticket-type.ng-star-inserted {
+    display: none !important;
+}
+
+/* Hide 'Main event ticket' on the cart page */
+div.ticket-card div {
     display: none !important;
 }
