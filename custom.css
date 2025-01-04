@@ -3,7 +3,8 @@ div.ticket-type.ng-star-inserted {
     display: none !important;
 }
 
-/* Hide 'Main event ticket' on the cart page */
-div.ticket-card div {
+/* Hide 'Main event ticket' on the cart page without affecting other content */
+div.card-wrapper div.ticket-card div {
     display: none !important;
 }
+
