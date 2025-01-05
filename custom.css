@@ -1,12 +1,12 @@
-/* Hide 'Main event ticket' on all screens */
-.ticket-type:contains('Main event ticket'),
-.ticket-title:contains('Main event ticket'),
-.ticket-summary:contains('Main event ticket'),
-.order-summary-card:contains('Main event ticket') {
+/* General rule to hide 'Main event ticket' */
+.ticket-type[_ngcontent-ihb-c232],
+.ticket-title[_ngcontent-ihb-c224],
+.main-title[_ngcontent-ihb-c224],
+.ticket-summary[_ngcontent-ihb-c224] {
     display: none !important;
 }
 
-/* Ensure donation summary and other lines remain visible */
-.order-summary-card:not(:contains('Main event ticket')) {
-    display: block !important;
+/* Additional rule for summary view in cart */
+.order-summary-card[_ngcontent-dso-c224] .event-name:contains('Main event ticket') {
+    display: none !important;
 }
