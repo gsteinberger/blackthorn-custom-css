@@ -9,3 +9,9 @@
 .ticket-summary:not(:contains('Main event ticket')) {
     display: block !important;
 }
+
+/* Restore the visibility of non-main-event items in the summary */
+.row-space-between:not(:contains('Main event ticket')),
+.ticket-title:not(:contains('Main event ticket')) {
+    display: block !important;
+}
