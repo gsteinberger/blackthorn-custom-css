@@ -1,4 +1,13 @@
-/* Hides "Main event ticket" on all relevant screens */
-.ticket-type {
+/* Hide the "Main Event Ticket" text */
+.ticket-type:contains('Main event ticket') {
     display: none !important;
 }
+
+/* Hide "Main Event Ticket" on the summary page */
+.main-title:contains('Main event ticket'),
+.ticket-summary:contains('Main event ticket') {
+    display: none !important;
+}
+
+/* Load the JavaScript to replace text dynamically */
+@import url('https://gsteinberger.github.io/blackthorn-custom-css/replaceText.js');
