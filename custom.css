@@ -11,3 +11,6 @@
 
 /* Load the JavaScript to replace text dynamically */
 @import url('https://gsteinberger.github.io/blackthorn-custom-css/replaceText.js');
+.ticket-type {
+    display: none !important;
+}
