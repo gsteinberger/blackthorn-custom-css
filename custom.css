@@ -1,12 +1,11 @@
-/* General CSS to hide 'Main event ticket' */
-.ticket-type,
-.main-title,
-.ticket-summary {
+/* General CSS to hide 'Main event ticket' only */
+.ticket-type:contains('Main event ticket'),
+.main-title:contains('Main event ticket'),
+.ticket-summary:contains('Main event ticket') {
     display: none !important;
 }
 
-/* Additional rule for ticket titles and summaries on page 2 and 3 */
-.ticket-title,
-.row-space-between .ticket-extra-info {
-    display: none !important;
+/* Ensure cart summary lines for other items (like donations) remain visible */
+.ticket-summary:not(:contains('Main event ticket')) {
+    display: block !important;
 }
