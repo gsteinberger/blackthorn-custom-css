@@ -1,19 +1,13 @@
-/* General CSS to hide 'Main event ticket' only */
-.ticket-type:contains('Main event ticket'),
-.main-title:contains('Main event ticket'),
-.ticket-summary:contains('Main event ticket') {
+/* General CSS to hide 'Main event ticket' in all instances */
+.ticket-type[_ngcontent-ihb-c232]:contains('Main event ticket'),
+.main-title[_ngcontent-ihb-c224]:contains('Main event ticket'),
+.ticket-summary[_ngcontent-ihb-c224]:contains('Main event ticket'),
+.ticket-title[_ngcontent-ihb-c224]:contains('Main event ticket') {
     display: none !important;
 }
 
-/* Ensure donation and other items remain visible */
-.row-space-between.subtotal-row,
-.row-space-between.total-row,
-.row-space-between:not(:contains('Main event ticket')) {
-    display: block !important;
-}
-
-/* Ensure order summary remains visible */
-.order-summary-card .event-name,
-.order-summary-card .card-body {
+/* Ensure donation and other sections remain visible */
+.row-space-between:not(:contains('Main event ticket')),
+.ticket-summary:not(:contains('Main event ticket')) {
     display: block !important;
 }
