@@ -1,9 +1,10 @@
-/* Hide 'Main event ticket' on the overview page */
-div.ticket-type.ng-star-inserted {
+/* Hide "Main event ticket" on Page 2 and Page 3 */
+div.ticket-type.ng-star-inserted,
+div.main-title.ng-star-inserted {
     display: none !important;
 }
 
-/* Hide 'Main event ticket' on the cart page */
-div.card-wrapper div.ticket-card div.bt-card-inner div.ticket-type {
+/* Hide "Main event ticket" in the cart summary */
+section.ticket-summary div.ticket-row.sub-title {
     display: none !important;
 }
