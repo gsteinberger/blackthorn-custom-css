@@ -1,12 +1,12 @@
 /* General CSS to hide 'Main event ticket' */
-.ticket-type[_ngcontent-cfc-c231],
-.main-title[_ngcontent-cfc-c231],
-.ticket-summary[_ngcontent-cfc-c231] {
+.ticket-type,
+.main-title,
+.ticket-summary {
     display: none !important;
 }
 
 /* Additional rule for ticket titles and summaries on page 2 and 3 */
-.ticket-title[_ngcontent-cfc-c231],
-.row-space-between[_ngcontent-cfc-c231] .ticket-extra-info[_ngcontent-cfc-c231] {
+.ticket-title,
+.row-space-between .ticket-extra-info {
     display: none !important;
 }
