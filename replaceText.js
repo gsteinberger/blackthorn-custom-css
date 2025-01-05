@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Find all elements containing 'Main event ticket' and update the text
-    document.querySelectorAll("div").forEach(function (el) {
-        if (el.textContent.trim() === "Main event ticket") {
-            // Check the preceding sibling to determine if it's a registration or donation
-            let previousSibling = el.previousElementSibling;
-            if (previousSibling && previousSibling.textContent.trim().toLowerCase().includes("registration")) {
-                el.textContent = "Registered"; // Change for registration items
-            } else if (previousSibling && previousSibling.textContent.trim().toLowerCase().includes("support")) {
-                el.textContent = "Donation"; // Change for donation items
-            }
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach(() => {
+            // Select all instances of the text "Main event ticket"
+            const elements = document.querySelectorAll('div, span, p, h2');
+            elements.forEach((el) => {
+                if (el.innerText.trim() === 'Main event ticket') {
+                    el.innerText = ''; // Replace with empty string or desired text
+                }
+            });
+        });
     });
+
+    // Observe changes in the body to catch dynamically loaded content
+    observer.observe(document.body, { childList: true, subtree: true });
 });
