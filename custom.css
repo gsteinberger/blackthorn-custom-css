@@ -5,13 +5,15 @@
     display: none !important;
 }
 
-/* Ensure cart summary lines for other items (like donations) remain visible */
-.ticket-summary:not(:contains('Main event ticket')) {
+/* Ensure donation and other items remain visible */
+.row-space-between.subtotal-row,
+.row-space-between.total-row,
+.row-space-between:not(:contains('Main event ticket')) {
     display: block !important;
 }
 
-/* Restore the visibility of non-main-event items in the summary */
-.row-space-between:not(:contains('Main event ticket')),
-.ticket-title:not(:contains('Main event ticket')) {
+/* Ensure order summary remains visible */
+.order-summary-card .event-name,
+.order-summary-card .card-body {
     display: block !important;
 }
