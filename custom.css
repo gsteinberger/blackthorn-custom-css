@@ -10,4 +10,3 @@
 .order-summary-card[_ngcontent-dso-c224] .event-name:contains('Main event ticket') {
     display: none !important;
 }
-@import url('https://gsteinberger.github.io/blackthorn-custom-css/hideMainEvent.js');
