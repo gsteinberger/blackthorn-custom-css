@@ -1,13 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Loader</title>
-    <link rel="stylesheet" href="https://gsteinberger.github.io/blackthorn-custom-css/custom.css">
-</head>
-<body>
-    <script src="https://gsteinberger.github.io/blackthorn-custom-css/replaceText.js"></script>
-<script src="https://gsteinberger.github.io/blackthorn-custom-css/hideMainEvent.js"></script>
-</body>
-</html>
+document.addEventListener('DOMContentLoaded', function () {
+    function hideMainEventTickets() {
+        // Select all elements containing "Main event ticket"
+        const elements = document.querySelectorAll(
+            '.ticket-type, .ticket-title, .main-title, .ticket-summary, .order-summary-card .event-name'
+        );
+
+        // Loop through and hide them
+        elements.forEach((el) => {
+            if (el.textContent.includes('Main event ticket')) {
+                el.style.display = 'none';
+            }
+        });
+    }
+
+    // Initial hide attempt
+    hideMainEventTickets();
+
+    // Observe DOM changes to handle dynamically added content
+    const observer = new MutationObserver(function () {
+        hideMainEventTickets();
+    });
+
+    // Start observing the entire document for changes
+    observer.observe(document.body, { childList: true, subtree: true });
+});
