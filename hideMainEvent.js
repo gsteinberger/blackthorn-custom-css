@@ -1,7 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to hide elements containing "Main event ticket"
-    function hideMainEventText() {
-        const elements = document.querySelectorAll('*:not(script):not(style)');
+document.addEventListener('DOMContentLoaded', function () {
+    function hideMainEventTickets() {
+        // Select all elements containing "Main event ticket"
+        const elements = document.querySelectorAll(
+            '.ticket-type, .ticket-title, .main-title, .ticket-summary, .order-summary-card .event-name'
+        );
+
+        // Loop through and hide them
         elements.forEach((el) => {
             if (el.textContent.includes('Main event ticket')) {
                 el.style.display = 'none';
@@ -9,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Run the function initially
-    hideMainEventText();
+    // Initial hide attempt
+    hideMainEventTickets();
 
-    // Observe changes to the DOM and re-run the function if needed
-    const observer = new MutationObserver(hideMainEventText);
+    // Observe DOM changes to handle dynamically added content
+    const observer = new MutationObserver(hideMainEventTickets);
     observer.observe(document.body, { childList: true, subtree: true });
 });
